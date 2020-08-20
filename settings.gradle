@@ -1,0 +1,2 @@
+include ':app', ':webview', ':common', ':base'
+rootProject.name='xiangxuewebview'

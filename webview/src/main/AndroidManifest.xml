@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wangduoyu.webview">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- android:usesCleartextTraffic="true"  允许http请求-->
+    <application android:usesCleartextTraffic="true">
+        <activity android:name=".WebViewActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+    </application>
+
+</manifest>
