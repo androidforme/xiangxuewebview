@@ -27,4 +27,5 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$rootProject.androidXVersion"
     api rootProject.loadsir
     implementation rootProject.lottie
+    api rootProject.smartrefresh
 }

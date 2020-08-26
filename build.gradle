@@ -41,5 +41,6 @@ ext {
     googleAutoServiceDependency = 'com.google.auto.service:auto-service:1.0-rc7'
     loadsir = 'com.kingja.loadsir:loadsir:1.3.6'
     lottie = 'com.airbnb.android:lottie:2.8.0'
+    smartrefresh = 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
 
 }

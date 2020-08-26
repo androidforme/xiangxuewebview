@@ -10,8 +10,8 @@ import com.wangduoyu.webview.utils.Constants
 @AutoService(IWebViewService::class)
 class WebViewServiceImp :IWebViewService {
 
-    override fun getWebViewFragment(url: String): Fragment {
-        return WebViewFragment.newInstance(url)
+    override fun getWebViewFragment(url: String, canNativeRefresh: Boolean): Fragment {
+        return WebViewFragment.newInstance(url, canNativeRefresh)
     }
 
     override fun startWebViewActivity(context: Context, url: String, title: String, isShowActionBar: Boolean) {

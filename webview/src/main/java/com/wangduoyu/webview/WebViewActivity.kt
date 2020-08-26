@@ -22,4 +22,8 @@ class WebViewActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.web_view_fragment,fragment).commit()
 
     }
+
+    fun updateTitle(title: String) {
+        binding.title.text = title
+    }
 }
