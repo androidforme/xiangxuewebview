@@ -9,6 +9,13 @@ import com.wangduoyu.webview.utils.Constants
 
 @AutoService(IWebViewService::class)
 class WebViewServiceImp :IWebViewService {
+    override fun startDemoHtml(context: Context) {
+        val intent = Intent(context,WebViewActivity::class.java).apply {
+            putExtra(Constants.TITLE,"本地demo测试页")
+            putExtra(Constants.URL,Constants.ANDROID_ASSET_URI+"demo.html")
+        }
+        context.startActivity(intent)
+    }
 
     override fun getWebViewFragment(url: String, canNativeRefresh: Boolean): Fragment {
         return WebViewFragment.newInstance(url, canNativeRefresh)

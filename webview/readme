@@ -2,3 +2,8 @@
 1，arouter ； 太复杂；
 2，cc 个人开发者； 字符串
 3，autoservice google
+
+webview js
+
+命令模式
+接口 = 命令 + 参数

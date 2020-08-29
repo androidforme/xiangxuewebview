@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
@@ -21,12 +23,18 @@ android {
         }
     }
 
+    dataBinding {
+        enabled = true
+    }
+
 }
 
 dependencies {
     implementation "androidx.appcompat:appcompat:$rootProject.androidXVersion"
-    api rootProject.loadsir
-    implementation rootProject.lottie
-    api rootProject.smartrefresh
-    api 'com.google.code.gson:gson:2.8.2'
+    kapt rootProject.googleAutoServiceDependency
+    implementation rootProject.googleAutoServiceDependency
+    annotationProcessor rootProject.googleAutoServiceDependency
+    api project(":common")
+    implementation 'com.google.android.material:material:1.0.0'
+
 }

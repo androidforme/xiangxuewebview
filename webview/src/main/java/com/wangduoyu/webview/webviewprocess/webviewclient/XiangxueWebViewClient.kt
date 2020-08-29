@@ -1,4 +1,4 @@
-package com.wangduoyu.webview.webviewclient
+package com.wangduoyu.webview.webviewprocess.webviewclient
 
 import android.graphics.Bitmap
 import android.util.Log

@@ -13,9 +13,10 @@ import com.kingja.loadsir.core.LoadSir
 import com.wangduoyu.base.loadsir.ErrorCallback
 import com.wangduoyu.base.loadsir.LoadingCallback
 import com.wangduoyu.webview.databinding.FragmentWebviewBinding
+import com.wangduoyu.webview.webviewprocess.settings.WebDefaultSettings
 import com.wangduoyu.webview.utils.Constants
-import com.wangduoyu.webview.webchromeclient.XiangxueWebChromeClient
-import com.wangduoyu.webview.webviewclient.XiangxueWebViewClient
+import com.wangduoyu.webview.webviewprocess.webchromeclient.XiangxueWebChromeClient
+import com.wangduoyu.webview.webviewprocess.webviewclient.XiangxueWebViewClient
 
 class WebViewFragment : Fragment(), WebViewCallBack {
 
@@ -53,10 +54,8 @@ class WebViewFragment : Fragment(), WebViewCallBack {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_webview, container, false)
-        binding.webview.settings.javaScriptEnabled = true
+        binding.webview.registerWebViewCallBack(this)
         binding.webview.loadUrl(mUrl)
-        binding.webview.webViewClient = XiangxueWebViewClient(this)
-        binding.webview.webChromeClient = XiangxueWebChromeClient(this)
         binding.smartRefreshLayout.apply {
             setEnableLoadMore(false)
             setEnableRefresh(mCanNativeRefresh)

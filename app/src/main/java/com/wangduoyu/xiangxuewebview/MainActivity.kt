@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         binding.openWebview.setOnClickListener {
             val webViewService = XiangxueServiceLoader.load(IWebViewService::class.java)
             webViewService?.run {
-                startWebViewActivity(this@MainActivity, "https://www.baidu.com", "1百度", true)
+                startDemoHtml(this@MainActivity)
             }
         }
     }
